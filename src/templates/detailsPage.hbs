@@ -1,0 +1,44 @@
+{{#each this}}
+<li class="details details__container">
+    <img class="details__img" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="foto {{original_title}}">
+    <div class="details__content-container">
+        <h2 class="details__title">{{original_title}}({{release_date}})</h2>
+        <ul class="details__list">
+            <li class="details__item"><span class="details__characteristic">vote/votes</span><span
+                    class="details__description">{{vote_average}}/{{vote_count}}</span></li>
+            <li class="details__item"><span class="details__characteristic">popularity</span><span
+                    class="details__description">{{popularity}}</span></li>
+            <li class="details__item"><span class="details__characteristic">original title</span><span
+                    class="details__description">{{original_title}}</span></li>
+            <li class="details__item"><span class="details__characteristic">genre</span>
+                <span class="details__description">
+                    {{#each genres}}
+                    <span class="details__description-item">{{name}}</span>
+                    {{/each}}
+                </span>
+            </li>
+        </ul>
+        <h2 class="details__about">About</h2>
+        <p class="details__text-about">{{overview}}</p>
+        <div class="details__button-container flex-container">
+            <button class="details__button-watched flex-container"><svg aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="video" class="svg-inline--fa fa-video fa-w-18" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor"
+                        d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z">
+                    </path>
+                </svg>Add to watched</button>
+            <button class="details__button-queue flex-container"><svg aria-hidden="true" focusable="false"
+                    data-prefix="fas" data-icon="calendar-plus" class="svg-inline--fa fa-calendar-plus fa-w-14"
+                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M436 160H12c-6.6 0-12-5.4-12-12v-36c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48v36c0 6.6-5.4 12-12 12zM12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm316 140c0-6.6-5.4-12-12-12h-60v-60c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v60h-60c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h60v60c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-60h60c6.6 0 12-5.4 12-12v-40z">
+                    </path>
+                </svg>Add to queue</button>
+        </div>
+        <div class="trailer-wrapper">
+            <iframe id="trailer" src="#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+    </div>
+</li>
+{{/each}}

@@ -1,0 +1,10 @@
+{{#each this}}
+<li class="film-item" id='{{id}}'>
+    {{#if backdrop_path}}
+    <img class="film-item__poster" src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="poster">
+    {{else}}
+     <img class="film-item__poster" src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_525041723_970647970450098_70024.jpg" alt="poster">
+{{/if}}
+    <p class="film-item__title">{{title}}</p>
+</li>
+{{/each}}

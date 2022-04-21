@@ -1,0 +1,144 @@
+.search-film {
+  height: 66px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.23));
+  background-color: #f3f6f6;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  &:hover{
+    height: 80px;
+  }
+
+  &__input {
+    min-width: 275px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #9c99a5;
+    border-radius: 5px;
+    background-color: inherit;
+    padding: 5px 5px 5px 24px;
+
+    &::placeholder {
+      font-size: 15px;
+      letter-spacing: 0px;
+      line-height: 14px;
+      color: #777676d5;
+      font-weight: 400;
+      font-family: 'Roboto';
+    }
+  }
+}
+
+.wrapper {
+  width: 260px;
+  background-color: inherit;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/search.svg');
+  }
+}
+
+.no-results {
+  margin: 0 auto;
+}
+
+.pagination.is-hidden {
+  display: none;
+}
+
+.is-hidden {
+  visibility: hidden;
+}
+.pagination {
+  width: 270px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  margin-bottom: 24px;
+
+  &__element {
+    height: 48px;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      0deg,
+      #efefef 40%,
+      rgba(239, 239, 239, 0) 100%
+    );
+    border: 1px solid #dddddd;
+    font-size: 22px;
+    line-height: 25px;
+    color: #556270;
+    font-weight: 700;
+    font-family: 'Droid Sans';
+    filter: drop-shadow(0px 1px 0.5px #ffffff);
+  }
+
+  &__element_button {
+    width: 95px;
+    cursor: pointer;
+  }
+
+  &__element_current-page {
+    width: 48px;
+  }
+
+  &__element_current-page::placeholder {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-film__input::placeholder {
+    line-height: 16px;
+    font-size: 16px;
+  }
+
+  .main-content {
+    width: 714px;
+  }
+
+  .pagination {
+    width: 212px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &__element {
+      height: 38px;
+      border-radius: 4px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &__element_button {
+      width: 75px;
+    }
+
+    &__element_current-page {
+      width: 38px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    width: 964px;
+  }
+
+  .pagination {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <title>Filmoteka-team-3</title>
+  </head>
+
+  <body class="body">
+    <header class="header flex-container container">
+      <div class="logo flex-container">
+        <img src="images/logo.svg" alt="logotype" class="logo__img" />
+        <p class="header-name">Filmoteka</p>
+      </div>
+      <nav class="nav flex-container">
+        <ul class="nav-list flex-container">
+          <li class="item home-button">
+            <p>home</p>
+          </li>
+          <li class="item library-button">
+            <p>my library</p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="search-wrapper">
+        <div class="library__btn__wrapper js-display__none">
+          <div class="library__btn__box">
+            <button type="button" class="library__btn__item js-btnWatched">
+              Watched
+            </button>
+            <button type="button" class="library__btn__item js-btnQueue">
+              Queue
+            </button>
+          </div>
+        </div>
+        <form action="#" class="search-film">
+          <div class="wrapper">
+            <input
+              class="search-film__input"
+              type="text"
+              name="subject"
+              placeholder="Write movie name and click Enter"
+            />
+          </div>
+        </form>
+      </div>
+      <ul class="container js-films-list"></ul>
+      <div class="pagination">
+        <button
+          type="button"
+          class="pagination__element pagination__element_button btn-prev is-hidden"
+          id="btn-prev"
+        >
+          Prev
+        </button>
+        <form action="#" class="page-input">
+          <input
+            type="text"
+            class="pagination__element pagination__element_current-page current-page"
+            id="current-page"
+          />
+        </form>
+        <button
+          type="button"
+          class="pagination__element pagination__element_button btn-next"
+          id="btn-next"
+        >
+          Next
+        </button>
+      </div>
+    </main>
+    <footer class="footer flex-container container">
+      <ul class="developers">
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U015YG627FZ">Armen</a></li>
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U0173357ZMW">Sarkis</a></li>
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U015YCQBGGP">Andrej</a></li>
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U0173527CG0">Michail</a></li>
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U016KCHLDBN">Ihor</a></li>
+        <li class="developers__item"><a class="developers__link" target="_blank" href="https://feadvanced21.slack.com/team/U016B22F745">Artem</a></li>
+      </ul>
+      <div class="name-group">
+        <p>Made by Night coders.</p>
+      </div>
+      <a class="back_to_top" title="go to top"
+        ><i class="fas fa-chevron-up"></i
+      ></a>
+    </footer>
+  </body>
+</html>
